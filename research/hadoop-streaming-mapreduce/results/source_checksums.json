@@ -1,0 +1,25 @@
+{
+  "source": "Original MS4S21 Assessment 1 (2026) supplied by the author",
+  "data_sources": {
+    "A_Christmas_Carol.txt": {
+      "sha256": "b17a397385bc212366b07b7c3f47c7ec388f2356d22c919dc79fffd09a57d9c3",
+      "bytes": 187986,
+      "gutenberg_ebook": 30368
+    },
+    "Moby_Dick_or_The_Whale.txt": {
+      "sha256": "da8f3a16bc604c926a734bd4c15d734721c1070e362f21488957c2b066b34017",
+      "bytes": 1276288,
+      "gutenberg_ebook": 2701
+    }
+  },
+  "original_report_results": {
+    "a_christmas_carol_top_10": [
+      ["the", 1786], ["and", 1131], ["of", 863], ["a", 767],
+      ["to", 741], ["in", 586], ["it", 529], ["he", 485],
+      ["was", 429], ["his", 418]
+    ],
+    "moby_dick_sentence_end_markers": 10969
+  },
+  "method": "Word mapper: lowercase; split whitespace; strip ASCII punctuation at ends; keep isalpha() words. Sentence mapper: count each occurrence of any of . ! ?. Includes Gutenberg front/back matter.",
+  "limitations": "Counts punctuation marks, not linguistically correct sentence boundaries. Hadoop cluster was not rerun here."
+}
