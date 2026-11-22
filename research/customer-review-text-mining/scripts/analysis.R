@@ -6,9 +6,11 @@
 args <- commandArgs(trailingOnly = TRUE)
 data_path <- if (length(args) >= 1 && !startsWith(args[1], "--")) args[1] else "data/example_reviews.csv"
 run_lda <- "--lda" %in% args
+run_nrc <- "--nrc" %in% args
 
 required <- c("readr", "dplyr", "tidyr", "tidytext", "ggplot2")
 if (run_lda) required <- c(required, "topicmodels")
+if (run_nrc) required <- c(required, "textdata")
 missing <- setdiff(required, rownames(installed.packages()))
 if (length(missing)) {
   stop("Missing R packages: ", paste(missing, collapse = ", "),
@@ -55,11 +57,14 @@ bing_counts <- bing_words %>%
   count(sentiment, name = "word_matches")
 write_csv(bing_counts, "outputs/bing_word_matches.csv")
 
-nrc_words <- tokens_all %>%
-  inner_join(tidytext::get_sentiments("nrc"), by = "word")
-nrc_counts <- nrc_words %>%
-  count(sentiment, name = "word_matches", sort = TRUE)
-write_csv(nrc_counts, "outputs/nrc_emotion_matches.csv")
+# NRC is optional because textdata requires first-time download/acceptance.
+if (run_nrc) {
+  nrc_words <- tokens_all %>%
+    inner_join(tidytext::get_sentiments("nrc"), by = "word")
+  nrc_counts <- nrc_words %>%
+    count(sentiment, name = "word_matches", sort = TRUE)
+  write_csv(nrc_counts, "outputs/nrc_emotion_matches.csv")
+}
 
 afinn_by_review <- tokens_all %>%
   inner_join(tidytext::get_sentiments("afinn"), by = "word") %>%
