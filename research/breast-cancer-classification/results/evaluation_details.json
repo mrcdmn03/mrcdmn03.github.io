@@ -1,0 +1,43 @@
+{
+  "dataset": {
+    "raw_rows": 571,
+    "clean_rows": 566,
+    "removed_missing_target_and_duplicate_rows": 5,
+    "features": 30,
+    "missing_numeric_cells_after_sentinel_conversion": 261,
+    "class_counts": {
+      "0": 355,
+      "1": 211
+    }
+  },
+  "train_rows": 452,
+  "test_rows": 114,
+  "models": {
+    "Logistic Regression": {
+      "confusion_matrix": [
+        [
+          69,
+          3
+        ],
+        [
+          2,
+          40
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n      Benign       0.97      0.96      0.97        72\n   Malignant       0.93      0.95      0.94        42\n\n    accuracy                           0.96       114\n   macro avg       0.95      0.96      0.95       114\nweighted avg       0.96      0.96      0.96       114\n"
+    },
+    "Random Forest": {
+      "confusion_matrix": [
+        [
+          72,
+          0
+        ],
+        [
+          3,
+          39
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n      Benign       0.96      1.00      0.98        72\n   Malignant       1.00      0.93      0.96        42\n\n    accuracy                           0.97       114\n   macro avg       0.98      0.96      0.97       114\nweighted avg       0.97      0.97      0.97       114\n"
+    }
+  }
+}
