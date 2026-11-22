@@ -1,0 +1,8 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: tables__final_model_comparison_accuracy.csv>
+index,Analysis,Model,MAE,RMSE,MAPE,MASE
+0,Overlapping monthly series,"ARIMA(0,1,4)",0.194,0.392,0.655,2.643
+1,Overlapping monthly series,Naive,0.221,0.455,0.752,3.009
+2,Non-overlapping quarterly sensitivity,"ARIMA(1,1,0)",0.642,1.454,2.205,4.942
+3,Non-overlapping quarterly sensitivity,"ARIMA(2,1,1)",0.811,1.632,2.764,6.248
+4,Non-overlapping quarterly sensitivity,Naive,0.502,1.039,1.726,3.87

@@ -1,0 +1,11 @@
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+.Rprofile
+.Rplots.pdf
+Rplots.pdf
+.DS_Store
+__MACOSX/
+*.log

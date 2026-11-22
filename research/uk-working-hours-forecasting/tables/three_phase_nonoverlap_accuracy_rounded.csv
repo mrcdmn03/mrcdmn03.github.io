@@ -1,0 +1,9 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: tables__three_phase_nonoverlap_accuracy_rounded.csv>
+index,Phase,Model,MAE,RMSE,MAPE,MASE
+0,Phase 1,"ARIMA(1,1,0)",0.484,1.165,1.662,3.788
+1,Phase 1,Naive,0.493,1.149,1.695,3.856
+2,Phase 2,"ARIMA(1,1,0)",0.73,1.617,2.549,6.001
+3,Phase 2,Naive,0.575,1.233,2.007,4.727
+4,Phase 3,"ARIMA(2,1,1)",0.811,1.632,2.764,6.248
+5,Phase 3,Naive,0.502,1.039,1.726,3.87

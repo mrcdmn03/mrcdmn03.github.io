@@ -1,0 +1,4 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: data_clean__hour01_sa_covid_summary_statistics.csv>
+index,observations,start_period,end_period,mean_hours,median_hours,min_hours,max_hours,sd_hours
+0,60,Nov-Jan 2018,Oct-Dec 2022,31.123600189735,31.7557667178409,25.9226513779129,32.3140676184925,1.53627989174784

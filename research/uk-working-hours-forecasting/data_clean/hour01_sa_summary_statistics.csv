@@ -1,0 +1,4 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: data_clean__hour01_sa_summary_statistics.csv>
+index,observations,start_period,end_period,mean_hours,median_hours,min_hours,max_hours,sd_hours
+0,408,Mar-May 1992,Feb-Apr 2026,32.14350712307,32.1034120302159,25.9226513779129,33.5406268824684,0.886451732741173

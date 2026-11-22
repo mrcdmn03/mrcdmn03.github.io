@@ -1,0 +1,6 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: tables__nonoverlapping_quarterly_sensitivity_accuracy.csv>
+index,Model,MAE,RMSE,MAPE,MASE
+0,"ARIMA(1,1,0)",0.642,1.454,2.205,4.942
+1,"ARIMA(2,1,1)",0.811,1.632,2.764,6.248
+2,Naive,0.502,1.039,1.726,3.87
