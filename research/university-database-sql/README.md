@@ -7,17 +7,78 @@ An academic project covering **relational database design**, **primary and forei
 ## What I built
 Six related tables: Courses, Tutors, Modules, Students, Course_Module and Enrolment, with composite keys and an optional-module CHECK constraint. The database models courses, student enrolments, tutor assignments and student grades. Five reporting queries answer business questions about course sizes, module performance, teaching workload, shared modules and unfilled optional modules.
 
-## ER diagram
+## Database design and ER diagram
+
+This database was developed for a fictional university department as part of my Principles of Computing coursework. The diagram reflects the table and column names in the published SQLite schema, adapted from the original Oracle SQL assignment.
 
 ```mermaid
 erDiagram
-    COURSES ||--o{ STUDENTS : "has"
-    COURSES ||--o{ COURSE_MODULE : "offers"
-    MODULES ||--o{ COURSE_MODULE : "included in"
-    TUTORS ||--o{ MODULES : "teaches"
-    STUDENTS ||--o{ ENROLMENT : "takes"
-    MODULES ||--o{ ENROLMENT : "enrolments"
+    COURSES ||--o{ STUDENTS : has
+    TUTORS ||--o{ MODULES : teaches
+    COURSES ||--o{ COURSE_MODULE : offers
+    MODULES ||--o{ COURSE_MODULE : belongs_to
+    STUDENTS ||--o{ ENROLMENT : enrols_in
+    MODULES ||--o{ ENROLMENT : has_enrolments
+
+    COURSES {
+        TEXT Course_ID PK
+        TEXT Course_Name
+        TEXT Level
+        TEXT Start_Date
+        INTEGER Duration_Months
+    }
+
+    TUTORS {
+        TEXT Tutor_ID PK
+        TEXT Tutor_Name
+        TEXT Email
+        TEXT Hire_Date
+        INTEGER Salary
+    }
+
+    MODULES {
+        TEXT Module_ID PK
+        TEXT Module_Code
+        TEXT Module_Title
+        INTEGER Credits
+        TEXT Term
+        INTEGER Is_Optional
+        TEXT Tutor_ID FK
+    }
+
+    STUDENTS {
+        TEXT Student_ID PK
+        TEXT Student_No
+        TEXT First_Name
+        TEXT Last_Name
+        INTEGER Enrol_Year
+        TEXT Fee_Status
+        TEXT Course_ID FK
+    }
+
+    COURSE_MODULE {
+        TEXT Course_ID PK,FK
+        TEXT Module_ID PK,FK
+    }
+
+    ENROLMENT {
+        TEXT Student_ID PK,FK
+        TEXT Module_ID PK,FK
+        INTEGER Mark
+        TEXT Grade
+    }
 ```
+
+### Relationships and integrity
+
+- **COURSES → STUDENTS:** Each student belongs to one course; each course can have multiple students.
+- **TUTORS → MODULES:** Each module is assigned to one tutor; a tutor can teach multiple modules.
+- **COURSES ↔ MODULES:** `COURSE_MODULE` links courses and modules through a many-to-many relationship.
+- **STUDENTS ↔ MODULES:** `ENROLMENT` links students and modules, with optional `Mark` and `Grade` values for each enrolment.
+
+Both `COURSE_MODULE` and `ENROLMENT` use **composite primary keys** made up of their two foreign-key columns. Foreign-key constraints maintain referential integrity. The `MODULES.Is_Optional` field is restricted to `0` or `1` by a `CHECK` constraint.
+
+For executable definitions and constraints, see [`sql/01_schema.sql`](sql/01_schema.sql). The repository uses anonymised, fictional sample records.
 
 ## Run the project
 
