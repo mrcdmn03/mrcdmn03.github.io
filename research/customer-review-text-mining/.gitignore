@@ -1,0 +1,10 @@
+.Rhistory
+.RData
+.Rproj.user/
+.Renviron
+.DS_Store
+outputs/
+data/MS4S09 Assessment 1 Dataset.csv
+data/*original*
+data/*Original*
+!data/example_reviews.csv
