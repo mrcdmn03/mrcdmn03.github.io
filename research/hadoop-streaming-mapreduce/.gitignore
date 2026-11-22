@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.pyc
+results/local_run/
+data/*.txt
+!data/README.md
