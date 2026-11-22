@@ -16,6 +16,10 @@ Open [`index.html`](index.html) locally or visit the GitHub Pages site once publ
 - **Lingo Isles:** SwiftUI iOS English-learning app, testing and App Store preparation.
 - **SQL & cloud coursework:** relational models, queries and AWS practical work.
 
+## Published source code
+
+- [UK Working Hours Forecasting — original R analysis, June 2026 ONS data, tables and selected figures](research/uk-working-hours-forecasting/README.md)
+
 ## Technical skills
 
 Power BI · Excel · Python · SQL · R · data validation · KPI reporting · forecasting · AWS · digital analytics
