@@ -37,3 +37,10 @@ This is a public-facing **case-study portfolio**. Original academic source code,
 ---
 
 See **KURULUM_TR.md** for publishing instructions.
+
+## Source code added from Principles of Computing (IS4S761)
+
+- [University department database: SQL schema, sample data, five queries and tests](research/university-database-sql/)
+- [Python data structures: eight functions and unit tests](research/python-data-structures/)
+
+These projects use the author's coursework as their basis. The SQL scripts were adapted from Oracle to SQLite for portability, with identifying demo records anonymised. The original Python function logic was retained, with course instructions removed from comments. The README files distinguish original coursework from portfolio additions.
