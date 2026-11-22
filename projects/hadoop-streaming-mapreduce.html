@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f9fb">
+<meta name="description" content="MS4S21 Hadoop Streaming coursework: Python MapReduce word counting and punctuation analysis, source-verified outputs and local reproducibility tests.">
+<title>Hadoop Streaming &amp; MapReduce | Mirac Duman</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html"><span class="brand-mark">MD<span>.</span></span><span>Mirac Duman</span></a><nav aria-label="Main navigation"><a href="../index.html#projects">Projects</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a class="nav-contact" href="mailto:mrcdmn03@outlook.com">Get in touch ↗</a></nav></div></header>
+<main>
+<section class="case-hero"><div class="container"><a class="back-link" href="../index.html#projects">← All projects</a>
+<div class="eyebrow" style="margin-top:30px">BIG DATA ENGINEERING · MSc PROJECT 10</div>
+<h1>Hadoop Streaming &amp; MapReduce</h1>
+<p class="case-subtitle">Two text-processing workflows built for a university Big Data Engineering assignment: word-frequency analysis and sentence-ending punctuation counting with Python, Hadoop Streaming and HDFS.</p>
+<div class="button-row"><a class="btn" href="https://github.com/mrcdmn03/mrcdmn03.github.io/tree/main/research/hadoop-streaming-mapreduce" target="_blank" rel="noopener noreferrer">View Python source code ↗</a>
+<a class="btn btn-outline" href="https://github.com/mrcdmn03/mrcdmn03.github.io/blob/main/research/hadoop-streaming-mapreduce/README.md" target="_blank" rel="noopener noreferrer">Read technical README ↗</a></div>
+</div></section>
+<section class="case-section"><div class="container case-layout">
+<div>
+<div class="case-block"><h2>Context</h2><p>For MS4S21 Big Data Engineering and its Applications, I used Hadoop Streaming to practise distributed text processing. I prepared Python mapper and reducer logic, checked Hadoop services, uploaded input texts to HDFS and inspected the job results.</p></div>
+<div class="case-block"><h2>Task 1 · Word-frequency analysis</h2><p>Analysed Charles Dickens's <em>A Christmas Carol</em>. The mapper lowercases text, splits words and filters punctuation before emitting key-value pairs. The reducer sums frequencies per word. In the supplied source edition, the most frequent word was <strong>the</strong> (1,786 occurrences), followed by <strong>and</strong> (1,131).</p></div>
+<div class="case-block"><h2>Task 2 · Sentence-marker count</h2><p>Analysed Herman Melville's <em>Moby Dick</em> by counting each period, exclamation mark and question mark. The original coursework's final Hadoop output reported <strong>10,969</strong> sentence-ending marks; I reproduced the same count locally. This is punctuation counting, not full linguistic sentence segmentation.</p></div>
+<div class="case-block"><h2>Reproducibility &amp; quality checks</h2><ul>
+<li>Four Python mapper/reducer scripts reconstructed from screenshots of my original coursework.</li>
+<li>Automated local workflow that simulates Hadoop's shuffle/sort and produces tab-separated results.</li>
+<li>Four passing unit tests using small sample texts; no third-party Python packages needed.</li>
+<li>Hadoop execution wrapper with HDFS input and output commands for an existing cluster.</li>
+<li>Source-edition SHA-256 hashes and verified output tables included for traceability.</li>
+</ul></div>
+<div class="note"><strong>Project provenance</strong><br>The supplied coursework archive contains reports, screenshots and the original text files, but not the standalone original Python scripts. These have been reconstructed for the portfolio, preserving the documented algorithms. Local code and results were tested; Hadoop itself has not been rerun. The source ebooks are linked in the README rather than republished on GitHub.</div>
+<div class="button-row"><a class="btn btn-outline" href="https://github.com/mrcdmn03/mrcdmn03.github.io/tree/main/research/hadoop-streaming-mapreduce" target="_blank" rel="noopener noreferrer">Explore repository files ↗</a><a class="btn btn-outline" href="../index.html#projects">← Back to projects</a></div>
+</div>
+<aside class="aside"><h2>Skills and tools</h2><div class="tags"><span class="tag">Hadoop Streaming</span><span class="tag">MapReduce</span><span class="tag">Python</span><span class="tag">HDFS</span><span class="tag">YARN</span><span class="tag">Bash</span><span class="tag">Text analytics</span><span class="tag">Unit testing</span></div><h2>Course</h2><p>MS4S21 · Big Data Engineering and its Applications<br>MSc Data Science, University of South Wales · 2026</p></aside>
+</div></section></main>
+<footer class="site-footer"><div class="container footer-inner"><span>© 2026 Mirac Duman · Newport, Wales</span><span>Portfolio case study · <a href="https://www.linkedin.com/in/miracduman/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></div></footer></body></html>
