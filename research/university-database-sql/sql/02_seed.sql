@@ -1,0 +1,71 @@
+-- Synthetic/anonymised coursework dataset; no real student or staff personal data.
+INSERT INTO Courses VALUES ('CS', 'Computer Science', 'MSc', '2025-09-23', 12);
+INSERT INTO Courses VALUES ('CYB', 'Cyber Security', 'MSc', '2025-09-23', 12);
+INSERT INTO Courses VALUES ('ICT', 'ICT', 'MSc', '2025-09-23', 12);
+
+INSERT INTO Tutors VALUES ('T01', 'Tutor 01', 'tutor01@example.invalid', '2020-09-01', 48500);
+INSERT INTO Tutors VALUES ('T02', 'Tutor 02', 'tutor02@example.invalid', '2019-01-15', 52500);
+INSERT INTO Tutors VALUES ('T03', 'Tutor 03', 'tutor03@example.invalid', '2021-04-10', 46200);
+INSERT INTO Tutors VALUES ('T04', 'Tutor 04', 'tutor04@example.invalid', '2018-10-05', 54500);
+INSERT INTO Tutors VALUES ('T05', 'Tutor 05', 'tutor05@example.invalid', '2022-02-20', 41800);
+INSERT INTO Tutors VALUES ('T06', 'Tutor 06', 'tutor06@example.invalid', '2017-06-30', 60200);
+
+INSERT INTO Modules VALUES ('M101', 'DBS701', 'Database Systems', 20, 'T1', 0, 'T02');
+INSERT INTO Modules VALUES ('M102', 'PRG702', 'Python Programming', 20, 'T1', 0, 'T03');
+INSERT INTO Modules VALUES ('M103', 'SEC703', 'Network Security', 20, 'T2', 0, 'T04');
+INSERT INTO Modules VALUES ('M104', 'DSA704', 'Data Structures', 20, 'T1', 0, 'T02');
+INSERT INTO Modules VALUES ('M105', 'ML705', 'Intro to Machine Learning', 20, 'T2', 1, 'T01');
+INSERT INTO Modules VALUES ('M106', 'CLD706', 'Cloud Computing', 20, 'T2', 1, 'T05');
+INSERT INTO Modules VALUES ('M107', 'BDA707', 'Big Data Analytics', 20, 'T2', 1, 'T06');
+INSERT INTO Modules VALUES ('M108', 'WEB708', 'Web Technologies', 20, 'T1', 1, 'T03');
+INSERT INTO Modules VALUES ('M109', 'PRJ709', 'Capstone Project', 40, 'T3', 0, 'T01');
+
+INSERT INTO Students VALUES ('S001', 'DEMO-001', 'Sample', 'Student01', 2025, 'Home', 'CS');
+INSERT INTO Students VALUES ('S002', 'DEMO-002', 'Sample', 'Student02', 2025, 'Home', 'CS');
+INSERT INTO Students VALUES ('S003', 'DEMO-003', 'Sample', 'Student03', 2025, 'Overseas', 'CYB');
+INSERT INTO Students VALUES ('S004', 'DEMO-004', 'Sample', 'Student04', 2025, 'Home', 'CYB');
+INSERT INTO Students VALUES ('S005', 'DEMO-005', 'Sample', 'Student05', 2025, 'Home', 'ICT');
+INSERT INTO Students VALUES ('S006', 'DEMO-006', 'Sample', 'Student06', 2025, 'Home', 'ICT');
+INSERT INTO Students VALUES ('S007', 'DEMO-007', 'Sample', 'Student07', 2025, 'Overseas', 'CS');
+INSERT INTO Students VALUES ('S008', 'DEMO-008', 'Sample', 'Student08', 2025, 'Home', 'CYB');
+INSERT INTO Students VALUES ('S009', 'DEMO-009', 'Sample', 'Student09', 2025, 'Home', 'CS');
+INSERT INTO Students VALUES ('S010', 'DEMO-010', 'Sample', 'Student10', 2025, 'Home', 'ICT');
+
+INSERT INTO Course_Module VALUES ('CS', 'M101');
+INSERT INTO Course_Module VALUES ('CS', 'M102');
+INSERT INTO Course_Module VALUES ('CS', 'M104');
+INSERT INTO Course_Module VALUES ('CS', 'M105');
+INSERT INTO Course_Module VALUES ('CS', 'M109');
+INSERT INTO Course_Module VALUES ('CYB', 'M101');
+INSERT INTO Course_Module VALUES ('CYB', 'M103');
+INSERT INTO Course_Module VALUES ('CYB', 'M106');
+INSERT INTO Course_Module VALUES ('CYB', 'M109');
+INSERT INTO Course_Module VALUES ('ICT', 'M101');
+INSERT INTO Course_Module VALUES ('ICT', 'M102');
+INSERT INTO Course_Module VALUES ('ICT', 'M106');
+INSERT INTO Course_Module VALUES ('ICT', 'M108');
+
+INSERT INTO Enrolment VALUES ('S001', 'M101', 78, 'A');
+INSERT INTO Enrolment VALUES ('S001', 'M102', 66, 'B');
+INSERT INTO Enrolment VALUES ('S001', 'M104', 72, 'B');
+INSERT INTO Enrolment VALUES ('S001', 'M105', NULL, NULL);
+INSERT INTO Enrolment VALUES ('S002', 'M101', 55, 'C');
+INSERT INTO Enrolment VALUES ('S002', 'M102', 61, 'B');
+INSERT INTO Enrolment VALUES ('S002', 'M104', 48, 'F');
+INSERT INTO Enrolment VALUES ('S003', 'M101', 70, 'B');
+INSERT INTO Enrolment VALUES ('S003', 'M103', 62, 'B');
+INSERT INTO Enrolment VALUES ('S003', 'M106', NULL, NULL);
+INSERT INTO Enrolment VALUES ('S004', 'M101', 59, 'C');
+INSERT INTO Enrolment VALUES ('S004', 'M103', 41, 'F');
+INSERT INTO Enrolment VALUES ('S005', 'M101', 64, 'B');
+INSERT INTO Enrolment VALUES ('S005', 'M102', 58, 'C');
+INSERT INTO Enrolment VALUES ('S005', 'M106', 60, 'B');
+INSERT INTO Enrolment VALUES ('S006', 'M101', NULL, NULL);
+INSERT INTO Enrolment VALUES ('S006', 'M108', NULL, NULL);
+INSERT INTO Enrolment VALUES ('S007', 'M101', 80, 'A');
+INSERT INTO Enrolment VALUES ('S007', 'M105', 74, 'B');
+INSERT INTO Enrolment VALUES ('S008', 'M101', 52, 'C');
+INSERT INTO Enrolment VALUES ('S009', 'M101', 69, 'B');
+INSERT INTO Enrolment VALUES ('S009', 'M104', 71, 'B');
+INSERT INTO Enrolment VALUES ('S010', 'M101', 56, 'C');
+INSERT INTO Enrolment VALUES ('S010', 'M102', 63, 'B');
