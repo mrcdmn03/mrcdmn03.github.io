@@ -1,0 +1,138 @@
+{
+  "project": "IS4S761 academic SQL demonstration",
+  "validation": "Executed against SQLite, sample records anonymised",
+  "results": [
+    {
+      "query": 1,
+      "columns": [
+        "Course_ID",
+        "Course_Name",
+        "NoOfStudents"
+      ],
+      "rows": [
+        [
+          "CS",
+          "Computer Science",
+          4
+        ],
+        [
+          "CYB",
+          "Cyber Security",
+          3
+        ],
+        [
+          "ICT",
+          "ICT",
+          3
+        ]
+      ]
+    },
+    {
+      "query": 2,
+      "columns": [
+        "Module_Code",
+        "Module_Title",
+        "NumStudents",
+        "AvgMark"
+      ],
+      "rows": [
+        [
+          "DBS701",
+          "Database Systems",
+          10,
+          64.77777777777777
+        ],
+        [
+          "DSA704",
+          "Data Structures",
+          3,
+          63.666666666666664
+        ],
+        [
+          "PRG702",
+          "Python Programming",
+          4,
+          62
+        ]
+      ]
+    },
+    {
+      "query": 3,
+      "columns": [
+        "Tutor_Name",
+        "ModulesTaught",
+        "AvgMarkAcrossModules"
+      ],
+      "rows": [
+        [
+          "Tutor 01",
+          1,
+          74
+        ],
+        [
+          "Tutor 02",
+          2,
+          64.5
+        ],
+        [
+          "Tutor 03",
+          2,
+          62
+        ],
+        [
+          "Tutor 05",
+          1,
+          60
+        ],
+        [
+          "Tutor 04",
+          1,
+          51.5
+        ]
+      ]
+    },
+    {
+      "query": 4,
+      "columns": [
+        "Module_Code",
+        "Module_Title",
+        "NumCourses"
+      ],
+      "rows": [
+        [
+          "DBS701",
+          "Database Systems",
+          3
+        ],
+        [
+          "CLD706",
+          "Cloud Computing",
+          2
+        ],
+        [
+          "PRG702",
+          "Python Programming",
+          2
+        ],
+        [
+          "PRJ709",
+          "Capstone Project",
+          2
+        ]
+      ]
+    },
+    {
+      "query": 5,
+      "columns": [
+        "Module_Code",
+        "Module_Title"
+      ],
+      "rows": [
+        [
+          "BDA707",
+          "Big Data Analytics"
+        ]
+      ]
+    }
+  ]
+}
