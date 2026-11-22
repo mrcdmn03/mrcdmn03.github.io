@@ -46,7 +46,7 @@ To run against the original coursework dataset after checking redistribution rig
 Rscript scripts/analysis.R "data/MS4S09 Assessment 1 Dataset.csv" --lda
 ```
 
-`--lda` enables four-topic LDA modelling. It is omitted by default because fitting the full document-term matrix can be computationally expensive. The input CSV must contain `Review Text` and `Rating` columns.
+`--nrc` additionally runs NRC emotion analysis; the first run may request a licensed lexicon download through the textdata package. `--lda` enables four-topic LDA modelling. It is omitted by default because fitting the full document-term matrix can be computationally expensive. The input CSV must contain `Review Text` and `Rating` columns.
 
 ## Files
 
