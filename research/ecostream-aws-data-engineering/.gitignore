@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+results/generated/
+results/aws_outputs/
+.DS_Store
+*.pem
+*.key
