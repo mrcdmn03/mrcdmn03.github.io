@@ -1,6 +1,124 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f9fb"><meta name="description" content="Developed an iOS English-learning app with SwiftUI and AI-assisted tools, covering interface work, features, testing and App Store preparation."><title>Lingo Isles · English-learning app | Mirac Duman</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body>
-<header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html"><span class="brand-mark">MD<span>.</span></span><span>Mirac Duman</span></a><nav aria-label="Main navigation"><a href="../index.html#projects">Projects</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a class="nav-contact" href="mailto:mrcdmn03@outlook.com">Get in touch ↗</a></nav></div></header>
-<main><section class="case-hero"><div class="container"><a class="back-link" href="../index.html#projects">← All projects</a><div class="eyebrow" style="margin-top:30px">IOS APPLICATION · CASE STUDY 06</div><h1>Lingo Isles · English-learning app</h1><p class="case-subtitle">Developed an iOS English-learning app with SwiftUI and AI-assisted tools, covering interface work, features, testing and App Store preparation.</p></div></section>
-<section class="case-section"><div class="container case-layout"><div><div class="case-block"><h2>Context</h2><p>Design and develop an approachable English-learning experience on iOS.</p></div><div class="case-block"><h2>What I worked on</h2><ul><li>Developed the application's interface and functionality in SwiftUI.</li><li>Used AI-assisted development tools during implementation.</li><li>Worked through testing and App Store submission preparation.</li><li>Planned promotion through an existing UK digital media brand.</li></ul></div><div class="case-block"><h2>Outcome</h2><p>An iOS project in App Store submission preparation at the time of this portfolio's creation.</p></div><div class="note"><strong>Public portfolio note</strong><br>This is not described as a published App Store listing. Screenshots and source links can be added when available.</div><div style="margin-top:40px"><a class="btn btn-outline" href="../index.html#projects">← Back to projects</a></div></div><aside class="aside"><h2>Tools &amp; topics</h2><div class="tags"><span class="tag">SwiftUI</span><span class="tag">iOS</span><span class="tag">Testing</span><span class="tag">Product development</span></div><h2>Project category</h2><p>iOS application</p></aside></div></section></main>
-<footer class="site-footer"><div class="container footer-inner"><span>© 2026 Mirac Duman · Newport, Wales</span><span>Built as a lightweight portfolio using HTML and CSS · <a href="https://www.linkedin.com/in/miracduman/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></div></footer>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f9fb">
+<meta name="description" content="Lingo Isles: a native SwiftUI English-learning iOS application with offline lessons, island-based progression, grammar practice, audio learning and optional iCloud backup.">
+<title>Lingo Isles | iOS App &amp; Product Engineering — Mirac Duman</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.lingo-hero{background:linear-gradient(124deg,#f4fff0 0%,#eaf8fc 60%,#f9f9fd 100%);border-bottom:1px solid #dfece6;overflow:hidden}
+.lingo-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(210px,.7fr);gap:42px;align-items:center;padding:54px 0 58px}
+.lingo-kicker{display:inline-flex;align-items:center;gap:9px;border:1px solid #bce8b3;background:#fff;border-radius:30px;padding:8px 14px;font:700 11px/1.2 system-ui,sans-serif;letter-spacing:.12em;color:#247b19}
+.lingo-dot{width:9px;height:9px;background:#49d006;display:inline-block;border-radius:50%}
+.lingo-hero h1{font-size:clamp(42px,6vw,76px);letter-spacing:-.055em;line-height:1.03;margin:22px 0 18px;color:#203440}
+.lingo-hero h1 span{color:#44c907}
+.lingo-lead{font-size:clamp(17px,2vw,20px);line-height:1.6;color:#536b77;max-width:620px}
+.lingo-badges{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 28px}
+.lingo-badges span{border:1px solid #d5e7e7;border-radius:9px;padding:8px 11px;background:#fff;color:#244b54;font:600 12px system-ui,sans-serif}
+.lingo-buttons{display:flex;gap:11px;flex-wrap:wrap}
+.lingo-buttons a{display:inline-flex;align-items:center;justify-content:center;min-height:45px;border-radius:11px;padding:12px 18px;font:700 14px system-ui,sans-serif;text-decoration:none;background:#41cb00;color:#12351a}
+.lingo-buttons a.secondary{background:transparent;border:1px solid #83b79c;color:#1d4b3f}
+.lingo-hero-image{max-width:340px;width:80%;display:block;margin:0 auto;filter:drop-shadow(0 18px 18px rgba(10,45,47,.15));border-radius:16px}
+.lingo-wrap{max-width:1160px;margin:auto;padding:56px 24px}
+.lingo-section-label{color:#257a22;text-transform:uppercase;letter-spacing:.15em;font:bold 11px system-ui,sans-serif;margin:0 0 9px}
+.lingo-section-title{font-size:clamp(25px,3vw,37px);letter-spacing:-.04em;margin:0 0 12px;color:#203440}
+.lingo-section-desc{color:#536977;line-height:1.65;max-width:800px;margin:0 0 27px}
+.lingo-metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.lingo-metric{background:#fff;border:1px solid #e2e9e8;border-radius:15px;padding:20px}
+.lingo-metric strong{font-size:32px;line-height:1;color:#2ca01b;display:block}
+.lingo-metric span{font-size:12px;font-weight:600;color:#59717c;display:block;margin-top:8px}
+.lingo-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.lingo-feature{padding:23px;border:1px solid #e3ecef;background:#fff;border-radius:16px}
+.lingo-feature .num{display:inline-block;color:#189fc6;font-size:13px;font-weight:800;margin-bottom:12px}
+.lingo-feature h3{font-size:18px;color:#1c3541;line-height:1.3;margin:0 0 10px}
+.lingo-feature p{color:#566c76;font-size:14px;line-height:1.6;margin:0}
+.lingo-gallery{display:flex;gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 2px 22px}
+.lingo-shot{flex:0 0 clamp(180px,20%,225px);scroll-snap-align:start;margin:0}
+.lingo-shot img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 11px 30px rgba(19,48,55,.12);border:1px solid #e5eded}
+.lingo-shot figcaption{padding:12px 2px;color:#3e5966;font:700 13px system-ui,sans-serif}
+.lingo-technical{background:#152f39;color:#edf8f8;border-radius:18px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lingo-technical h3{color:#fff;font-size:17px;margin:0 0 10px}
+.lingo-technical p,.lingo-technical li{color:#c0d3d5;line-height:1.7;font-size:14px}
+.lingo-technical li{margin-bottom:8px}
+.lingo-pill{display:inline-flex;background:#dff9db;color:#197b18;border-radius:20px;padding:7px 12px;font-weight:700;font-size:12px}
+.lingo-note{border-left:4px solid #1faed5;background:#eff9fd;border-radius:0 12px 12px 0;padding:21px 23px;color:#304e59;line-height:1.7}
+@media(max-width:800px){.lingo-hero-grid{grid-template-columns:1fr;padding:30px 0 44px}.lingo-hero-image{width:60%;max-width:270px}.lingo-metric-grid{grid-template-columns:repeat(2,1fr)}.lingo-features{grid-template-columns:repeat(2,1fr)}.lingo-technical{grid-template-columns:1fr}}
+@media(max-width:520px){.lingo-wrap{padding:42px 18px}.lingo-features{grid-template-columns:1fr}.lingo-shot{flex-basis:190px}.lingo-hero-grid{gap:22px}.lingo-hero-image{width:76%}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="../index.html"><span class="brand-mark">MD<span>.</span></span><span>Mirac Duman</span></a>
+<nav aria-label="Main navigation"><a href="../index.html#projects">Projects</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a class="nav-contact" href="mailto:mrcdmn03@outlook.com">Get in touch ↗</a></nav>
+</div></header>
+<main>
+<section class="lingo-hero"><div class="container lingo-hero-grid">
+<div>
+<a class="back-link" href="../index.html#projects">← All projects</a>
+<div style="margin-top:25px"><span class="lingo-kicker"><span class="lingo-dot"></span>INDEPENDENT iOS PRODUCT · SWIFTUI</span></div>
+<h1>Learning English,<br><span>your own way.</span></h1>
+<p class="lingo-lead">Lingo Isles is an English-learning app I developed around short practice sessions, a visual learning journey and rewarding offline activities. A native iOS product combining curriculum design with a playful, island-based interface.</p>
+<div class="lingo-badges"><span>SwiftUI</span><span>Offline-first</span><span>AVFoundation</span><span>CloudKit (optional)</span><span>AI-assisted development</span></div>
+<div class="lingo-buttons">
+<a href="https://github.com/mrcdmn03/mrcdmn03.github.io/blob/main/research/lingo-isles/README.md" target="_blank" rel="noopener noreferrer">Technical case study ↗</a>
+<a class="secondary" href="#screens">Explore app screens ↓</a>
+</div>
+</div>
+<img class="lingo-hero-image" src="../assets/lingo-isles/home.webp" width="360" height="784" alt="Lingo Isles home screen promotional screenshot, showing the learning path, daily coach and progress cards">
+</div></section>
+<section class="lingo-wrap" aria-label="Learning content">
+<p class="lingo-section-label">Source-verified project scope</p>
+<h2 class="lingo-section-title">A curriculum designed to keep learners progressing.</h2>
+<p class="lingo-section-desc">The version 6.3.2 source package contains the following content records. Figures below describe bundled resources; they are not user numbers, learning outcomes or independent release-test results.</p>
+<div class="lingo-metric-grid">
+<div class="lingo-metric"><strong>6</strong><span>THEMED LEARNING ISLANDS</span></div>
+<div class="lingo-metric"><strong>60</strong><span>STRUCTURED LESSON RECORDS</span></div>
+<div class="lingo-metric"><strong>838</strong><span>VOCABULARY ENTRIES</span></div>
+<div class="lingo-metric"><strong>18 + 12</strong><span>STORIES AND MISSIONS</span></div>
+</div>
+</section>
+<section style="background:#f7fafb" id="screens"><div class="lingo-wrap">
+<p class="lingo-section-label">Product design</p><h2 class="lingo-section-title">Explore the interface.</h2>
+<p class="lingo-section-desc">Five original promotional screenshots supplied from the application project. The design uses floating islands, high-contrast action buttons, reward systems and distinct activities for different learning styles.</p>
+<div class="lingo-gallery">
+<figure class="lingo-shot"><img loading="lazy" src="../assets/lingo-isles/home.webp" width="360" height="784" alt="Lingo Isles home screen with daily coach and progress tracking"><figcaption>01 / Daily progress</figcaption></figure>
+<figure class="lingo-shot"><img loading="lazy" src="../assets/lingo-isles/learning-path.webp" width="360" height="784" alt="Lingo Isles learning path showing unlocked and locked grammar lessons"><figcaption>02 / Learning path</figcaption></figure>
+<figure class="lingo-shot"><img loading="lazy" src="../assets/lingo-isles/practice.webp" width="360" height="784" alt="Lingo Isles practice screen with quick mix and practice skills"><figcaption>03 / Flexible practice</figcaption></figure>
+<figure class="lingo-shot"><img loading="lazy" src="../assets/lingo-isles/adventure.webp" width="360" height="784" alt="Lingo Isles adventure hub with stories, missions and island exploration"><figcaption>04 / Offline adventure</figcaption></figure>
+<figure class="lingo-shot"><img loading="lazy" src="../assets/lingo-isles/island.webp" width="360" height="784" alt="Lingo Isles island builder with unlockable places and rewards"><figcaption>05 / Island builder</figcaption></figure>
+</div>
+</div></section>
+<section class="lingo-wrap">
+<p class="lingo-section-label">Product engineering</p><h2 class="lingo-section-title">More than an interface.</h2>
+<p class="lingo-section-desc">The codebase includes dedicated learning stores, versioned local content, audio components and optional account-independent services.</p>
+<div class="lingo-features">
+<div class="lingo-feature"><span class="num">01 / LEARNING</span><h3>Offline-first curriculum</h3><p>Bundled JSON learning resources and locally stored progress support lessons without an account or an external AI service.</p></div>
+<div class="lingo-feature"><span class="num">02 / ENGAGEMENT</span><h3>Rewards and progression</h3><p>XP, streaks, coins and island building connect practice with a visible sense of progression.</p></div>
+<div class="lingo-feature"><span class="num">03 / PRACTICE</span><h3>Multiple ways to learn</h3><p>Grammar, vocabulary, listening, focused exercises, stories and branching missions in one experience.</p></div>
+<div class="lingo-feature"><span class="num">04 / AUDIO</span><h3>On-device audio features</h3><p>AVFoundation supports spoken examples and a local pronunciation recording/playback activity.</p></div>
+<div class="lingo-feature"><span class="num">05 / BACKUP</span><h3>Optional iCloud sync</h3><p>CloudKit-based manual save, restore and deletion flows are present in the source; production validation is still needed.</p></div>
+<div class="lingo-feature"><span class="num">06 / ENGINEERING</span><h3>AI-assisted development</h3><p>AI tools supported parts of the software-development workflow. The app's lessons themselves do not require a conversational AI model.</p></div>
+</div></section>
+<section class="lingo-wrap" style="padding-top:0">
+<div class="lingo-technical">
+<div><h3>Technology &amp; architecture</h3>
+<ul><li>Native iOS interface: SwiftUI</li><li>Structured content: bundled versioned JSON</li><li>Local progress and state: model/store layer and UserDefaults</li><li>Speech and recording: AVFoundation</li><li>Optional backup: private CloudKit database</li><li>Optional adult newsletter signup: external HTTPS form</li></ul>
+</div>
+<div><h3>Public repository &amp; quality controls</h3>
+<p>The full Xcode source, proprietary educational content and service configuration remain private. The portfolio documentation describes the system and its design decisions without exposing the commercial project.</p>
+<div class="lingo-buttons" style="margin-top:18px">
+<a href="https://github.com/mrcdmn03/mrcdmn03.github.io/blob/main/research/lingo-isles/architecture.md" target="_blank" rel="noopener noreferrer">Architecture notes ↗</a>
+</div></div>
+</div>
+</section>
+<section class="lingo-wrap" style="padding-top:0">
+<p class="lingo-section-label">Release transparency</p>
+<h2 class="lingo-section-title">Development snapshot, not an App Store release claim.</h2>
+<div class="lingo-note">The reviewed v6.3.2 package contains source and regression-check documentation. Its integration report does not verify a completed Xcode/iPhone build, live CloudKit production deployment, newsletter double opt-in or a published App Store listing. Those checks are required before claiming a public release. The five images are supplied promotional screenshots, not evidence of a release.</div>
+<div style="margin-top:32px"><a class="btn btn-outline" href="../index.html#projects">← Back to all projects</a></div>
+</section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><span>© 2026 Mirac Duman · Newport, Wales</span><span>Portfolio case study · <a href="https://www.linkedin.com/in/miracduman/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></div></footer>
 </body></html>
